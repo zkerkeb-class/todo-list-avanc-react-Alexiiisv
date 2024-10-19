@@ -1,0 +1,115 @@
+.page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.taskItem input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.taskItem button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.taskItem button:hover {
+  background-color: #ff1a1a;
+}
+
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Bordure grise claire */
+  border-radius: 8px;
+  background-color: #1a1a1a; /* Fond gris foncé */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Ombre légère */
+}
+
+.filterContainer {
+  display: flex;
+  gap: 10px;
+}
+
+/* Input styles */
+.task-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #007bff; /* Bordure bleue */
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #333; /* Fond d'entrée gris foncé */
+  color: #fff; /* Texte blanc */
+}
+
+.task-input:focus {
+  border-color: #0056b3; /* Bordure bleue plus foncée au focus */
+}
+
+/* Button styles */
+.buttonAdd, .buttonFilter {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonAdd {
+  background-color: #007bff; /* Fond bleu */
+  color: white; /* Texte blanc */
+}
+
+.buttonAdd:hover {
+  background-color: #0056b3; /* Fond bleu plus foncé au survol */
+}
+
+.buttonFilter {
+  background-color: #444; /* Fond gris foncé pour les boutons de filtre */
+  color: #fff; /* Texte blanc */
+  padding: 1%;
+}
+
+.buttonFilter  :hover {
+  background-color: #555; /* Fond gris plus clair au survol */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .inputContainer {
+      flex-direction: column; /* Aligne les éléments en colonne sur les petits écrans */
+  }
+  .task-input {
+      width: 100%; /* Prend toute la largeur de l'écran sur les petits écrans */
+      margin-bottom: 10px; /* Marge en bas pour séparer l'input des boutons */
+  }
+}
+
+
