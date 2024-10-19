@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "next": "14.2.15",
@@ -23,6 +25,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "eslint-config-prettier": "^9.1.0",
+    "gh-pages": "^6.2.0",
     "husky": "^9.1.6",
     "typescript": "^5"
   }

@@ -5,6 +5,7 @@ const useTasks = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [taskText, setTaskText] = useState('');
   const [filter, setFilter] = useState('all');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Load tasks from local storage on component mount
@@ -13,12 +14,13 @@ const useTasks = () => {
     if (savedTasks) {
       console.log('Loading tasks from local storage:', savedTasks);
       setTasks(JSON.parse(savedTasks));
+      setLoading(false);
     }
   }, []);
 
   useEffect(() => {
     // Save tasks to local storage whenever tasks change
-    if (tasks.length > 0) {
+    if (tasks.length > 0 && !loading) {
         console.log('Saving tasks to local storage:', tasks);
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
